@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastre seu veículo para vender rápido!</h1>
+    </header>
+    <main>
+        <div>
+            <h2>Formulário</h2>
+            <hr>
+        </div>
+        <form action="form.js" method="post">
+            <h3>Venda fácil seu carro!</h3>
+            <p>Descreva as características e marque os opcionais que ele possui</p>
+            <div>
+                <label for="car-title">Título do anúncio <span>*</span></label>
+                <input type="text" name="car-title" id="car-title" placeholder="Um título para anunciar seu carro" minlength="10" maxlength="30">
+            </div>
+            <div>
+                <label for="car-price">Preço <span>*</span></label>
+                <input type="number" name="car-price" id="car-price" placeholder="Define um preço">
+            </div>
+            <div>
+                <label for="description">Descrição <span>*</span></label>
+                <textarea name="description" id="description" placeholder="Aqui você coloca os detalhes do veículo, por exemplo: se ele tem algum arranhão."></textarea>
+            </div>
+            <div>
+                <label for="brand">Marca <span>*</span></label>
+                <input type="text" name="brand" id="brand" placeholder="Digite a marca do veículo">
+            </div>
+            <div>
+                <label for="model">Modelo <span>*</span></label>
+                <input type="text" name="model" id="model" placeholder="Digite o modelo do veículo">
+            </div>
+            <div>
+                <label for="mileage">Kilometragem <span>*</span></label>
+                <input type="text" name="mileage" id="mileage" placeholder="Digite a kilometragem do veículo">
+            </div>
+            <div>
+                <label for="buy-date">Data da comprar <span>*</span></label>
+                <input type="date" name="buy-date" id="buy-date" min="1990-01-01">
+            </div>
+            <div class="radio">
+                <p>Tipo de câmbio: <span>*</span></p>
+                <div>
+                    <input type="radio" id="manual" name="manual-or-automatic" value="manual">
+                    <label for="manual">Manual</label>
+                </div>
+                <div>
+                    <input type="radio" id="automatic" name="manual-or-automatic" value="automatic">
+                    <label for="automatic">Automático</label>
+                </div>
+            </div>
+
+            <div id="opcionais">
+
+                <p style="font-size: 24px; font-weight: 500;">Opcionais: <span>*</span></p>
+                <div class="opcionais">
+                    <div>
+                        <input type="checkbox" id="airbag" name="airbag" value="airbag">
+                        <label for="airbag">Airbag</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="alarme" name="alarme" value="alarme">
+                        <label for="alarme">alarme</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Ar-condicionado" name="Ar-condicionado" value="Ar-condicionado">
+                        <label for="Ar-condicionado">Ar-condicionado</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Câmera-de-Ré" name="Câmera-de-Ré" value="Câmera-de-Ré">
+                        <label for="Câmera-de-Ré">Câmera de Ré</label>
+                    </div>
+                </div>
+
+                <div class="opcionais">
+                    <div>
+                        <input type="checkbox" id="Assistente-de-Pista" name="Assistente-de-Pista" value="Assistente-de-Pista">
+                        <label for="Assistente-de-Pista">Assistente de Pista</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Partida-Keyless" name="Partida-Keyless" value="Partida-Keyless">
+                        <label for="Partida-Keyless">Partida Keyless</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Integracao-com-celular" name="Integracao-com-celular" value="Integracao-com-celular">
+                        <label for="Integracao-com-celular">Integração com celular</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Banco-de-couro" name="Banco-de-couro" value="Banco-de-couro">
+                        <label for="Banco-de-couro">Banco de couro</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="photo">
+                <label for="car-photo">Fotos do carro: <span>*</span></label>
+                <input type="file" id="car-photo" name="car-photo" accept=".jpeg, .png" multiple required>
+            </div>
+            <div>
+                <input type="submit">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
